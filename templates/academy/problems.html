@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index_stylesheet.css' %}" />
+</head>
+<body>
+<h3 style="text-align: center; font-size: 22px"> Problems List </h3><br/>
+<hr/><br/>
+<div>
+    <strong>Name</strong>
+    {% for i in "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" %}
+        &nbsp;
+    {% endfor %}
+    <strong>Uploaded On</strong>
+    {% for i in "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" %}
+        &nbsp;
+    {% endfor %}
+        <strong>Uploaded By</strong>
+    {% for i in "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" %}
+        &nbsp;
+    {% endfor %}
+        <strong>Solved By</strong>
+    <hr style="height: 2px"/>
+    <br/>
+</div>
+{% for problem in problem_list %}
+    <ol>
+        <a style="color: black; font-weight: 800;" href="{% url 'question' problem.id %}"><li style="font-size: 18px">{{ problem.problem_name }}  {{ problem.uploaded_at }} {{ problem.uploaded_by }}</li> </a>
+    </ol>
+    <hr style="height: 3px"/><br/>
+{% endfor %}
+</body>
+</html>

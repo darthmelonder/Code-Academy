@@ -1,0 +1,81 @@
+.typeform {
+	border-radius: 45px;
+	position: absolute;
+	left: 800px;
+	background-color: #e3e3e3;
+	text-align: center;
+	padding: 50px;
+}
+
+hr {
+    height: 10px;
+    background-color: black;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover{
+    opacity: 0.8;
+}
+
+.indexbody {
+    background-color: #efefef;
+}
+
+.heading {
+    color:
+    font-family: sans-serif
+    font-style: italic
+}
+
+a:link {
+    color: darkgreen;
+}
+
+a:visited {
+    color: darkgreen;
+}
+
+a:hover {
+    color: darkgreen;
+}
+
+.banner {
+    background-color: white;
+    color: white;
+    height: 100px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 40px;
+}
+.button1 {
+    background-color: #4CAF50;
+    height: 50em;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+}
+.button1:hover {
+    background-color: black;
+    color: white;
+}

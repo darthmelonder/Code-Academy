@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index_stylesheet.css' %}" />
+</head>
+<body class="indexbody">
+<h3 style="text-align: center; font-size: 25px"> Register </h3>
+<br/>
+<hr/>
+<br/>
+{% if error_message %}
+    <h4> {{error_message }} </h4>
+{% endif %}
+<br/>
+<form action="{% url 'verify' %}" method="post">
+    {% csrf_token %}
+    <div>
+        <div class="typeform">
+            Name: &nbsp;
+            <input type="text" name="name" required /><br/><br/>
+            Username: &nbsp;
+            <input type="text" name="user_name" required /> <br/> <br/>
+            MySingle: &nbsp;
+            <input type="text" name="mysingle" required /> <br/> <br/>
+            Password: &nbsp;
+            <input type="password" name="password" required /> <br/><br/>
+            Confirm Password: &nbsp;
+            <input type="password" name="confirm_password" required /> <br/><br/>
+            <input type="submit" value="Register" />
+            <br/>
+        </div>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/index_stylesheet.css' %}" />
+</head>
+<h3 style="text-align: center; font-size: 25px"> Code Academy </h3>
+	<br/>
+<hr />
+<br/>
+{% if error_message %}
+<h4> {{ error_message }}</h4>
+{% endif %}
+<br/>
+<form action="{% url 'profile' %}" method="post">
+{% csrf_token %}
+	<div>
+		<div class="typeform" align="center">
+			Username: <br/>
+			<input  type="text" name="user_name"><br/>
+			Password: <br/>
+			<input   type="password" name="password"><br/><br/>
+			<input type="submit" value="Login"><br/><br/>
+			<a href="{% url 'register' %}"> Register Here </a>
+		</div>
+	</div>
+</form>
+</body>
+</html>
